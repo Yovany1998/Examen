@@ -38,22 +38,39 @@ class Menu:
              """)
     def ingreso(self):
         placa = input("Ingrese la placa del vehiculo: ")
-        marca = input("Ingrese la placa del vehiculo: ")
-        modelo = input("Ingrese la placa del vehiculo: ")
-        tipo_de_vehiculo = input("Ingrese la placa del vehiculo: ")
-        print("la placa se agrego correctamente")
+        marca = input("Ingrese la marca del vehiculo: ")
+        modelo = input("Ingrese el modelo del vehiculo: ")
+        tipo_de_vehiculo = input("Ingrese tipo de  vehiculo: ")
+        horas_vehiculo = input("Ingrese la hora de ingreso del vehiculo: ")
+        estado = input("Estado por defecto True: ")
+        print("El vehiculo se ingreso correctamente")
         pass
 
     def totalVehiculos(self):
+        """Muestra el total de vehiculos"""
  
         for vehi in vehiculos:
-            print("placa: {0}\nmarca: '{1}'\nmodelo: {2}\ntip: {3}"
-                  .format())
+            print("placa: {0}\nmarca: '{1}'\nmodelo: {2}\ntipo: {3}\ntipo_de_vehiculo: {4}\hora_ingreso: {5}\nestado: "
+                  .format(vehi.placa,vehi.marca,vehi.modelo,vehi.tipo_de_vehiculo,vehi.horas_vehiculo,vehi.estado))
 
-
+    
 
     def salida(self):
-         pass
+        """Se ingresala placa del vehiculo para buscar su tarifa"""
+        
+        buscar=input("Ingrese la placa del vehiculo que saldra")
+
+        if(vehi.tipo_de_vehiculo == "Motocicleta"):
+            tipo = 10
+            total = vehi.horas_vehiculo*tipo-((vehi.horas_vehiculo-1)*1)
+        elif(vehi.tipo_de_vehiculo == "Automovil"):
+            tipo = 20
+            total = vehi.horas_vehiculo*tipo-((vehi.horas_vehiculo-1)*4)
+        else:
+            prinf("No se reconoce el tipo de vehiculo")
+            total = 0
+
+        print("El total a pagar por las horas es ",total)
 
     def gananciasDia(self):
          pass
